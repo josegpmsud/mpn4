@@ -16,8 +16,7 @@ class AsistenciaController extends Controller
     public function store(Request $request)
     {
         $asistencia = new Asistencia();
-        $asistencia->alumno_id = $request->alumno_id;
-        $asistencia->curso_id = $request->curso_id;
+        $asistencia->matricula_id = $request->matricula_id;
         $asistencia->fecha = $request->fecha;
         $asistencia->asistio = $request->asistio;
         $asistencia->save();
@@ -32,9 +31,9 @@ class AsistenciaController extends Controller
     public function update(Request $request, string $id)
     {
         $asistencia = Asistencia::find($id);
-        $asistencia->nombre = $request->nombre;
-        $asistencia->descripcion = $request->descripcion;
-        $asistencia->maestro_id = $request->maestro_id;
+        $asistencia->matricula_id = $request->matricula_id;
+        $asistencia->fecha = $request->fecha;
+        $asistencia->asistio = $request->asistio;
         $asistencia->save();
         return "Registro Actualizado Correctamente";
     }

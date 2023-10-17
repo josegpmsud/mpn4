@@ -52,15 +52,17 @@ Route::controller(CursoController::class)->group(function(){
 Route::controller(MatriculaController::class)->group(function(){
     Route::get('/matriculas', 'index');
     Route::get('/matricula/{id}', 'show');
-    Route::post('/matricula', 'store');
-    Route::put('/matricula/{id}', 'update');
+    Route::post('/matricula', 'store')->middleware('combinacion-unica-matricula:alumno_id,curso_id');
+    Route::put('/matricula/{id}', 'update')->middleware('combinacion-unica-matricula:alumno_id,curso_id');
     Route::delete('/matricula/{id}', 'destroy');
 });
+
+
 
 Route::controller(AsistenciaController::class)->group(function(){
     Route::get('/asistencias', 'index');
     Route::get('/asistencia/{id}', 'show');
-    Route::post('/asistencia', 'store');
+    Route::post('/asistencia', 'store')->middleware('combinacion-unica-asistencia:matricula_id,fecha');
     Route::put('/asistencia/{id}', 'update');
     Route::delete('/asistencia/{id}', 'destroy');
 });
