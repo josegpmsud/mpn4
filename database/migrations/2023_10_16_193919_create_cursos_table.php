@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('descripcion');
 
-            $table->unsignedBigInteger('maestro_id');
-            $table->foreign('maestro_id')
+            $table->unsignedBigInteger('docente_id');
+            $table->foreign('docente_id')
                 ->references('id')
-                ->on('maestros')
+                ->on('docentes')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 

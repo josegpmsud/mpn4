@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlumnoController;
-use App\Http\Controllers\MaestroController;
+use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\MatriculaController;
 use App\Http\Controllers\AsistenciaController;
@@ -33,12 +33,12 @@ Route::controller(AlumnoController::class)->group(function(){
     Route::delete('/alumno/{id}', 'destroy');
 });
 
-Route::controller(MaestroController::class)->group(function(){
-    Route::get('/maestros', 'index');
-    Route::get('/maestro/{id}', 'show');
-    Route::post('/maestro', 'store');
-    Route::put('/maestro/{id}', 'update');
-    Route::delete('/maestro/{id}', 'destroy');
+Route::controller(DocenteController::class)->group(function(){
+    Route::get('/docentes', 'index');
+    Route::get('/docente/{id}', 'show');
+    Route::post('/docente', 'store');
+    Route::put('/docente/{id}', 'update');
+    Route::delete('/docente/{id}', 'destroy');
 });
 
 Route::controller(CursoController::class)->group(function(){

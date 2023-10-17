@@ -19,7 +19,7 @@ class CursoFactory extends Factory
         return [
             'nombre' => fake()->jobTitle(),
             'descripcion' => fake()->text(100),
-            'maestro_id' => random_int(1,20),
+            'docente_id' => random_int(1,20),
         ];
     }
 }
