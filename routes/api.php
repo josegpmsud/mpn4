@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\MaestroController;
+use App\Http\Controllers\CursoController;
+use App\Http\Controllers\MatriculaController;
+use App\Http\Controllers\AsistenciaController;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 
 Route::controller(AlumnoController::class)->group(function(){
     Route::get('/alumnos', 'index');
