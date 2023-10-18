@@ -53,11 +53,9 @@ Route::controller(MatriculaController::class)->group(function(){
     Route::get('/matriculas', 'index');
     Route::get('/matricula/{id}', 'show');
     Route::post('/matricula', 'store')->middleware('combinacion-unica-matricula:alumno_id,curso_id');
-    Route::put('/matricula/{id}', 'update')->middleware('combinacion-unica-matricula:alumno_id,curso_id');
+    Route::put('/matricula/{id}', 'update');
     Route::delete('/matricula/{id}', 'destroy');
 });
-
-
 
 Route::controller(AsistenciaController::class)->group(function(){
     Route::get('/asistencias', 'index');
