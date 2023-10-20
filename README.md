@@ -1,3 +1,52 @@
+# Descripción adicionales en el proyecto mpn4
+
+## El test en Postman se encuentra en la carpeta raiz en el archivo siguiente: 
+
+- mpn4.postman_collection.json
+
+## Se incluyo dos middleware personalizados
+
+- Uno para validar que no se repitan las matriculaciones
+
+- Otro para que no se repitan las asistencias de una matriculacion en un mismo dia
+
+
+# BASE DE DATOS:
+
+1. **Tabla `alumnos`**:
+   - `id` (PK)
+   - `nombre`
+   - `apellido`
+   - `correo_electronico`
+   - `fecha_nacimiento`
+   
+
+2. **Tabla `docentes`**:
+   - `id` (PK)
+   - `nombre`
+   - `apellido`
+   - `correo_electronico`
+   
+3. **Tabla `cursos`**:
+   - `id` (PK)
+   - `nombre`
+   - `descripcion`
+   - `docente_id`(FK)
+   
+
+4. **Tabla `matriculas`**:
+   - `id` (PK)
+   - `alumno_id`(FK)
+   - `curso_id`(FK)
+   - `nota`
+   
+5. **Tabla `asistencias`**:
+   - `id` (PK)   
+   - `matricula_id`(FK)
+   - `fecha`
+   - `asistio` (A,T,F)
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
