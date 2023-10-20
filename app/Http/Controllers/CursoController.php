@@ -18,7 +18,7 @@ class CursoController extends Controller
         $curso = new Curso();
         $curso->nombre = $request->nombre;
         $curso->descripcion = $request->descripcion;
-        $curso->maestro_id = $request->maestro_id;
+        $curso->docente_id = $request->docente_id;
         $curso->save();
         return "Registro Guardado Correctamente";
     }
@@ -33,7 +33,7 @@ class CursoController extends Controller
         $curso = Curso::find($id);
         $curso->nombre = $request->nombre;
         $curso->descripcion = $request->descripcion;
-        $curso->maestro_id = $request->maestro_id;
+        $curso->docente_id = $request->docente_id;
         $curso->save();
         return "Registro Actualizado Correctamente";
     }

@@ -19,7 +19,7 @@ class AlumnoController extends Controller
         $alumno->nombre = $request->nombre;
         $alumno->apellido = $request->apellido;
         $alumno->correo_electronico = $request->correo_electronico;
-        $alumno->fecha_nacimiento = $request->fecha_registro;
+        $alumno->fecha_nacimiento = $request->fecha_nacimiento;
         $alumno->save();
         return "Registro Guardado Correctamente";
     }
@@ -35,7 +35,7 @@ class AlumnoController extends Controller
         $alumno->nombre = $request->nombre;
         $alumno->apellido = $request->apellido;
         $alumno->correo_electronico = $request->correo_electronico;
-        $alumno->fecha_nacimiento = $request->fecha_registro;
+        $alumno->fecha_nacimiento = $request->fecha_nacimiento;
         $alumno->save();
         return "Registro Actualizado Correctamente";
     }
